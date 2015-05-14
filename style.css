@@ -140,9 +140,9 @@ border: 1px solid #00a39e;
 	/*position: absolute;*/
 	z-index: 150;
 }
-.looking{
+/*.looking{
 	
-}
+}*/
 .found{
 	display:none;
 }
@@ -177,4 +177,4 @@ border: 1px solid #00a39e;
   }
 }
 
-/*
+

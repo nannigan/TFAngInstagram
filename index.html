@@ -10,10 +10,10 @@
     <div class="outer">
       <div class='header'> <!-- <img src="img/birdsheader.jpg"> --></div>
       <div class='container'>
-        
-        
-  <!--    pink boxes? <hr> -->
-       
+
+
+
+
 <h3>Angular Instagram Search</h3>
 
         <div class='query-box'>
@@ -23,33 +23,33 @@
             <input type="text" name="search-terms" ng-model="searchTerms"  placeholder="keywords for search" required/>
                 <!--  <div ng-if='myForm.$submitted' ng-messages for="myForm.searchTerms.$error" class='error'>
                     <ng-message when="required"> text, please</ng-message>
-                
+
                  </div> -->
-              
+
             <button>  show me pics! </button>
             <!-- //first button in form taken as submit -->
           </form>
           <span class='looking' ng-show='' ng-hide='myForm.$submitted && myForm.$valid'>Searching for {{searchTerms}} on instagram&hellip;</span>
-           <span class='found' ng-if='data.results' ng-hide=''>We found {{data.length}} pictures of {{searchTerms}} on instagram</span>
+           <span class='found' ng-if='data.results' ng-hide=''>We found {{images.length}} pictures of {{searchTerms}} on instagram</span>
         </div>
 
-      
-        <div name='results' ng-show="data.results" class='results-box '> <!-- ng-class={animateData()} -->
+
+        <div name='results' ng-show="data" class='results-box '> <!-- ng-class={animateData()} -->
           <div ng-repeat'image in images'>
             <a href= "#modal"><img ng-src='{{data.thumbnail.url}}' height='{{data.thumbnail.height}}' width='{{data.thumbnail.width}}'></a>
           </div>
-          <div id='modal' name='modal' class='modal'>
+<!--           <div id='modal' name='modal' class='modal'>
             <img ng-src='{{data.standard-resolution.url}}'height='{{data.standard-resolution.height}}' width='{{data.standard-resolution.width}}'>
-          </div>
+          </div> -->
         </div>
-              
+
       </div>
     </div>
 
     <script data-require="angular.js@1.3.10" data-semver="1.3.10"  src="https://code.angularjs.org/1.3.10/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-messages.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-animate.min.js"></script>
-    
+
     <script src="app.js"></script>
   </body>
 </html>
