@@ -1,0 +1,171 @@
+/*// my colors
+// --------------------------------------------------
+// #fffdf7 very very pale yellow
+ //#a32716  angular red aprox
+*/
+
+* {
+	box-sizing: border-box;
+}
+
+
+html{
+	font-size: 18px;
+}
+
+body{
+font-family: Lato, sans-serif;
+line-height: 2.5;
+
+	font-size: 100%;
+	font-weight: 400;
+}
+body, div, p, section, article, form, input, a, button, nav, table, td, tr, hr, ul, li{
+	margin:0;
+	padding:0;
+}
+h1,h2,h3,h4,h5,h6{
+			font-family: Oswald, sans-serif;
+			font-weight: 400;
+			text-transform: uppercase;
+}
+
+
+input[type='text']{
+	outline:none;
+	margin: 1rem 1.25rem; 
+	padding:.7rem;
+	background-color: #fffdf7;
+	border:1px dotted #a32716;
+	width: 50%;
+}
+input[type='text']:focus{
+	box-shadow: 0 0 8px #15a4b6;
+	border: 1px solid #15a4b6;
+
+}
+input[placeholder]{
+	font-family: PT Mono;
+	color: #a32716;
+}
+
+label{
+	margin-left: 1.2em;
+}
+
+a {
+	font-size: 1rem;
+	color: #1e43b6;
+	text-decoration: none;
+	border-bottom: 1px dotted #1e43b6;
+}
+hr {
+border: 1px solid #00a39e;
+}
+.header>img{
+	max-height: 116px;
+	padding: 0 2em;	
+	display: inline-block;
+}
+.header:first-child{
+	margin-left:16%;
+}
+
+.header:last-child{
+	margin-right:20%;
+}
+.logo-items{
+	position:absolute;
+	max-height: 116px;
+	margin:0 auto;
+}
+.error{
+	margin-top:-20px;
+	padding-bottom:10px;
+	color:#a32716;
+	font-family: inherit;
+	font-size:.6em;
+	font-style:italic;
+	font-weight:bold;
+	
+}
+
+/*.redButt{
+	background:#a32716;
+	padding: 1em;
+	text-transform:uppercase;
+	color:#fff;
+	float: right;
+	box-shadow: none;
+	border:none;
+
+}*/
+
+/*layout*/
+
+.clear,.clearfix{
+  clear:both
+}
+.clear:after,.clearfix:after{
+  content:" ";
+  display:block;
+  height:0;
+  font-size:0;
+  clear:both;
+  visibility:hidden
+}
+.outer{
+	display: inline-flex;
+	flex-direction: column;
+	/*  flex-align: stretch;*/
+	width:100%;
+	height:100%;
+	background:#fffdf7;
+	overflow:auto;
+	
+}
+.container{
+	flex: 1 100%;
+	width:90%;
+	margin: 0 auto;
+	padding:0 20px;
+	padding-bottom: 200px;
+	background:#fff;
+	border-left: 1px solid #00b6d9;
+	border-right: 1px solid #00b6d9;
+	overflow:auto;
+}
+.looking{
+	
+}
+.found{
+	display:none;
+}
+.query-box{
+	background-color: #00b6d9;
+	border: 1px dotted #00a39e;
+	opacity:.7;
+}
+.results-box{
+	background-color: #0965cf;
+	border: 1px dotted #00a39e;
+	opacity:.3;
+}
+
+
+/*media queries*/
+@media (max-width: 600px) {
+
+  input[type=text]
+ {
+    width: 100%; 
+  }
+}
+@media (min-width: 1200px) {
+ input[type=text]
+ {
+    width: 40%; 
+  }
+}
+
+/*
