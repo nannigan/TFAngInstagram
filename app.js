@@ -1,9 +1,10 @@
 var app= angular.module('app', [])
 .controller('myController', function($scope, $http){
-    $scope.getPics = function(data) {
-        var url = "https://api.instagram.com/v1/tags/" + data + "/media/recent";
+    $scope.getPics = function(searchTerms) {
+        var url = "https://api.instagram.com/v1/tags/" + searchTerms + "/media/recent";
         var request = {
-          client_id:'40f58b3815c04090b0918afa12312859'
+          client_id:'40f58b3815c04090b0918afa12312859',
+          callback: 'JSON_CALLBACK'
           //data: data.images // goes to error alert console.logs
           //Uncaught SyntaxError: recent?client_id=40f58b3815c04090b0918afa12312859:1
         };
@@ -11,13 +12,10 @@ var app= angular.module('app', [])
             method: 'JSONP',
             url: url,
             params: request,
-            callback: 'JSON_CALLBACK'
+
           })
         .success(function(response){
-           $scope.data = response;
-
-           console.log($scope.data);
-           $scope.images = response.data.images;
+            $scope.pics = response.data;
           })
         .error(function(){
            alert('uhoh');
@@ -25,3 +23,4 @@ var app= angular.module('app', [])
   };
 });//end controller
 
+//angular.forEach(result, function(response) {

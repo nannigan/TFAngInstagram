@@ -20,9 +20,9 @@ line-height: 2.5;
 
 	font-size: 100%;
 	font-weight: 400;
-	
+
 background-color: #e7eaf2;
-	background-image: url('img/horses-bg.jpg') ;	
+	background-image: url('img/horses-bg.jpg') ;
 }
 body, div, p, section, article, form, input, a, button, nav, table, td, tr, hr, ul, li{
 	margin:0;
@@ -38,7 +38,7 @@ h1,h2,h3,h4,h5,h6{
 
 input[type='text']{
 	outline:none;
-	margin: 1rem 1.25rem; 
+	margin: 1rem 1.25rem;
 	padding:.7rem;
 	background-color: #fffdf7;
 	border: 1px dotted #00a39e;
@@ -68,16 +68,27 @@ a {
 hr {
 border: 1px solid #00a39e;
 }
+
+button{
+    font-family: PT Mono;
+    letter-spacing:.02em;
+    background-color: #00b6d9;
+    padding:1em;
+    /*padding-top:.8em;*/
+    color: #fff;
+    box-shadow: none;
+    border: none;
+}
 .header>img{
 	max-width: 100%;
-	margin: 0;
-	padding: 0;	
+	margin: 10px auto;
+	/*padding: 0;*/
 	display: block;
-	position:absolute;
-	z-index: 50;
 }
+
 .header>h3{
 	position:absolute;
+
 	z-index: 150;
 }
 .logo-items{
@@ -93,7 +104,7 @@ border: 1px solid #00a39e;
 	font-size:.6em;
 	font-style:italic;
 	font-weight:bold;
-	
+
 }
 
 /*.redButt{
@@ -126,7 +137,7 @@ border: 1px solid #00a39e;
 	height:100%;
 
 	overflow:auto;
-	
+
 }
 .container{
 	/*  flex: 1 100%;*/
@@ -141,10 +152,10 @@ border: 1px solid #00a39e;
 	z-index: 150;
 }
 /*.looking{
-	
+
 }*/
-.found{
-	display:none;
+.found, .looking{
+	margin-left: 12px;
 }
 .query-box{
 	margin-top: 2em;
@@ -155,25 +166,25 @@ border: 1px solid #00a39e;
 }
 .results-box{
 	background-color: rgba(255,255,255,.2);
-	background-color: #0965cf;
 	border: 1px dotted #00a39e;
-	/*position: absolute;*/
-	/*  z-index: 250;*/
-}
 
+}
+.thumb{
+    padding: 14px;
+}
 
 /*media queries*/
 @media (max-width: 600px) {
 
   input[type=text]
  {
-    width: 100%; 
+    width: 100%;
   }
 }
 @media (min-width: 1200px) {
  input[type=text]
  {
-    width: 40%; 
+    width: 40%;
   }
 }
 
